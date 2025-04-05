@@ -1,0 +1,316 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Cutie!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+   .poem-heading {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: block;
+    max-width: 90%;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    border: 1.5px solid #ffb6c1;
+    box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+    font-family: 'Dancing Script', cursive;
+    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            overflow: hidden;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s;
+            max-width: 90%;
+            text-align: center;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 25px;
+            transition: transform 0.2s, font-size 0.2s, background 0.3s;
+            background-color: #ff4d6d;
+            color: white;
+        }
+        .btn:hover {
+            background-color: #ff3366;
+            transform: scale(1.1);
+        }
+        #page4 {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            background: url('https://i.postimg.cc/NLZ46BGs/background.jpg') no-repeat center center/cover;
+            overflow: auto;
+            padding: 20px;
+        }
+        .scroll-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: auto;
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            line-height: 1.8;
+            color: #333;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ffc1cc;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .highlight {
+            color: #e91e63;
+            font-weight: bold;
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+        .glow {
+            color: #d81b60;
+            text-shadow: 0 0 5px #ffb6c1, 0 0 10px #ffb6c1;
+        }
+        .read-again {
+            margin-top: 40px;
+            font-size: 20px;
+            padding: 12px 30px;
+            border-radius: 30px;
+            background-color: #ff80ab;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .read-again:hover {
+            background-color: #ec407a;
+        }
+    </style>
+</head>
+<body>
+    <audio id="clickSound" preload="auto" crossorigin="anonymous">
+        <source src="https://dl.dropboxusercontent.com/scl/fi/ocwekxiad76porkewgdfd/Until-I-found-you-audio.mp3?rlkey=xyx4m9v3hu9zbc1y0jlapdt9a" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container" id="page1">
+        <h2>Hey cutie, may I ask you a quick question?</h2>
+        <button class="btn" onclick="startAudioAndNext('page2')">Sure</button>
+        <button class="btn" onclick="startAudioAndNext('page2')">Why not?</button>
+    </div>
+
+    <div class="container" id="page2" style="display: none;">
+        <h2>I've a surprise for you, do you want to know what?<br>(Hint: it's a poem crafted by me JUST FOR YOU)</h2>    
+        <button class="btn yes" id="yuppp" onclick="nextPage('page3')">Yuppp</button>
+        <button class="btn no" id="noThanks" onclick="moveNo('noThanks', 'yuppp')">No, thanks</button>
+    </div>
+
+    <div class="container" id="page3" style="display: none;">
+        <h2>First tell me, do you love me?</h2>
+        <button class="btn" id="yess" onclick="nextPage('page4')">YESS, OF COURSE🫶</button>
+        <button class="btn" id="nooo" onclick="moveNo('nooo', 'yess')">NOOO🫥</button>
+    </div>
+
+    <div id="page4">
+        <div class="scroll-container fade-in" id="poemBox">
+<div class="poem-heading">
+    <h2>My Pretty Cat<br>🫠🫶❣️♾️</h2>
+</div>
+<p>
+    <span class="glow">Hey there, nice to meet you girl</span>👀🎀<br>
+    <i>even though we spent a</i> <span class="highlight">fraction of years</span> together,🍂<br>
+    they still got me <b>illusioned</b> in your whirl....😵‍💫<br><br>
+
+    how I wish if only we could be always <span style="color:#e91e63; font-weight:bold;">together</span>,👥<br>
+    although I realized it <i>much later</i>,😪<br>
+    that you're the <span class="glow">only one for me, my ''her''</span>.🤞🫀<br><br>
+
+    this poem I wrote for <b>you</b>,🫵<br>
+    to express how much I <span style="color:#ff4081;">admire you</span>....🫠🫶<br><br>
+
+    starting with your <span style="color:#ec407a;">eyes</span>, which got me thinking👀<br>
+    how can one's eyes be so pretty even while blinking,🫣<br>
+    they do look like <span class="glow">wonderful stars</span>✨🤌<br>
+    being <i>much adorable</i>, even when they're pretty far....🪐🪄<br><br>
+
+    descending to your <b>little nose</b>😸<br>
+    which when red, looks like a flower... <i>let's say a tiny rose</i>,🌹<br>
+    it's a cozy place for your anger to sit,🐱<br>
+    making you look even <span class="highlight">cuter</span> and cuter no matter what's your fit....👗🫠🫶<br><br>
+
+    your <b>eye-catching cheeks</b> are next,😸<br>
+    chubby but becomes bright red,👀🎀<br>
+    while reading any of my flirty texts.🌚😹<br><br>
+
+    your <span style="color:#f06292;">ears</span> are also pretty sharp🐱<br>
+    can't even understand how are they carved,😩<br><br>
+
+    time to praise your <b>beautiful hands</b>👐<br>
+    <i>soft, warm, and comforting</i>😌❣️<br>
+    which gets me to crave just for another meeting😫🪄<br>
+    I wanna hold them <span style="color:#ec407a;">always and forever</span>🤞🐱<br>
+    tight and tight no matter whatsoever,👀✨<br><br>
+
+    regardless of how you feel 'bout your <i>pretty body</i>🪄<br>
+    I may inform you, you look always stunning while sitting or standing, <span class="glow">you hottie</span>,😸😹<br>
+    or binding 'me' with 'you' with your voice of melody, <span class="highlight">my lady</span>.<br><br>
+
+    honestly I don't have any "those" kinda dirty intentions with the lines lying next🤧<br>
+    however, I have to express that <b>you're and will always be the best</b>,🫴🫠<br><br>
+
+    you've got a beautiful chest in which a big heart is there🫀🎀<br>
+    Oh! I wish if I was the only one inside of it, <span style="color:#ad1457;">without any ploy to share</span>😶‍🌫️🫶<br><br>
+
+    little below lies your <span style="color:#f8bbd0;">mini belly</span>, about which you might be shy,😽<br>
+    so maybe I shouldn't be going further below or I'd be a freaky guy....😂<br><br>
+
+    you've the eyes only to which I wanna get lost in🎠💓🎡<br>
+    and that <b>cute smile</b> of yours, prettier than any cosmic scene....☄️🪐🌌<br><br>
+
+    you can always toy with me, ignore me or annoy me🐱🧸😭<br>
+    still it's only your voice to which I can listen to even if they're more than hours of three💌🤞💘🪄<br><br>
+
+    Oh my!😱 being lost in your deep ocean like eyes,<br>
+    I almost forgot🥲 about your vast black hair staying at the most high,😺<br><br>
+
+    they are dark and deep💌<br>
+    which would definitely be messy while you're asleep.😴<br><br>
+
+    To be honest, it doesn't matter where we are or what's the time,⏳🎐<br>
+    I'm completely <b>yours</b> and <span class="glow">you're and will always gonna be mine and MINE</span>.🤞♾️❣️<br><br>
+
+    However, these are not the reasons why I fell for you.🧸🍭<br>
+    Physical appearance might get noticed at first but next lines are also true.<br><br>
+
+    The <b>emotional understanding</b> of someone actually turns the table<br>
+    like how your personality is literally <span style="color:#ab47bc;">unforgettable</span>.<br><br>
+
+    It was the amazing character of yours for which anyone would fall in love with,🖇💕<br>
+    even if it's a little amount to fit🪅<br>
+    the <i>good soul</i> of yours attracting even tiny bits.💫☄️<br><br>
+
+    You're pretty, beautiful, charming, and many more words,📒🖋<br>
+    expressing the beauty yet to be discovered.🎡🌌🎠<br><br>
+
+    Now, listen <span style="color:#f06292;">my cute and gorgeous cat</span>🐱<br>
+    you're really <span class="glow">ineffable</span> regardless of anything this or that.<br><br>
+
+    These days, I always crave for the <i>presence of you</i>🫠💓<br>
+    just to listen your yaps or to have a glimpse of you🫣💗<br><br>
+
+    Oh my dear cat! maybe you won't believe but it's actually true,<br>
+    that I'm totally <span class="highlight">in love with you</span>....🫠❣️🫶<br><br>
+
+    I don't actually know if this comes out of the blue,🎎🎈<br>
+    but <span class="highlight">my pretty cat I really love you</span> and promise to always do....🤞💕🐱<br><br>
+
+    At last there's just one thing to share☄️🍭🧸<br>
+    that no matter what, <span class="glow">for you I'll always be there</span>....🖇🌌🤞💕<br>
+</p>
+
+            <button class="read-again" onclick="replayAudio()">Read it again</button>
+        </div>
+    </div>
+
+    <script>
+        const audio = document.getElementById('clickSound');
+
+        function playAudioFrom(time, fadeIn = true) {
+            audio.pause();
+            audio.currentTime = time;
+            audio.volume = fadeIn ? 0 : 1;
+            const playPromise = audio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    if (fadeIn) fadeInAudio();
+                }).catch(error => {
+                    console.error("Audio play error:", error);
+                });
+            }
+        }
+
+        function startAudioAndNext(pageId) {
+            nextPage(pageId);
+            playAudioFrom(20, true);
+        }
+
+        function fadeInAudio() {
+            let volume = 0;
+            const fadeIn = setInterval(() => {
+                volume += 0.01;
+                audio.volume = Math.min(volume, 1);
+                if (volume >= 1) clearInterval(fadeIn);
+            }, 50);
+        }
+
+        function fadeOutAndLoop() {
+            let volume = 1;
+            const fadeOut = setInterval(() => {
+                volume -= 0.01;
+                audio.volume = Math.max(volume, 0);
+                if (volume <= 0) {
+                    clearInterval(fadeOut);
+                    playAudioFrom(20, true);
+                }
+            }, 50);
+        }
+
+        audio.addEventListener('ended', fadeOutAndLoop);
+
+        function nextPage(pageId) {
+            document.querySelectorAll('.container').forEach(div => div.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        function moveNo(noId, yesId) {
+            let noButton = document.getElementById(noId);
+            let yesButton = document.getElementById(yesId);
+            let container = noButton.parentElement;
+
+            let containerRect = container.getBoundingClientRect();
+            let noButtonRect = noButton.getBoundingClientRect();
+            let maxX = containerRect.width - noButtonRect.width - 20;
+            let maxY = containerRect.height - noButtonRect.height - 20;
+
+            let randX = Math.random() * maxX;
+            let randY = Math.random() * maxY;
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = randX + 'px';
+            noButton.style.top = randY + 'px';
+
+            let currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = (currentSize + 5) + 'px';
+        }
+
+        function replayAudio() {
+            const box = document.getElementById('poemBox');
+            box.classList.remove('fade-in');
+            void box.offsetWidth;
+            box.classList.add('fade-in');
+            box.scrollTop = 0;
+            audio.pause();
+            playAudioFrom(35, false);
+        }
+    </script>
+</body>
+</html>
